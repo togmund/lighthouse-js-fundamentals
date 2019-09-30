@@ -394,11 +394,14 @@ console.log(cry(1));
 function emotions(myString, myFunc) {
   console.log("I am " + myString + ", " + myFunc(2));
 }
-
-emotions("happy", function laugh(max) {
-  let output = "";
-  for (let i = 0; i < max; i++) {
-    output += "ha";
+emotions(
+  "happy",
+  // Here's the Inline part. The function is the 2nd argument
+  function laugh(max) {
+    let output = "";
+    for (let i = 0; i < max; i++) {
+      output += "ha";
+    }
+    return output+"!";
   }
-  return output+"!";
-}); // you can use your laugh function from the previous quizzes
+);
