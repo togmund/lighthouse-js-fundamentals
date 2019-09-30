@@ -277,10 +277,128 @@ for (let i = 1; i < 13; i++) {
 }
 console.log(solution);
 
-*/
+
 
 for (let row = 0; row < 26; row++) {
   for (let seat = 0; seat < 100; seat++) {
     console.log(row + "-" + seat);
   }
 }
+
+
+
+function findAverage(x, y) {
+  var answer = (x + y) / 2;
+  return answer;
+}
+
+var avg = findAverage(5, 9);
+console.log(avg);
+
+
+function laugh(num) {
+  let output = "";
+  for (let i = 0; i < num; i++) {
+    output += 'ha';
+  }
+  return output + '!';
+}
+console.log(laugh(3));
+
+
+
+function addTen(x) {
+  return x + 10;
+}
+
+function divideByThree(y) {
+  return y / 3;
+}
+
+let result = addTen(2);
+console.log(divideByThree(result));
+
+
+
+function makeLine(length) {
+  let line = "";
+  for (let j = 1; j <= length; j++) {
+    line += "* ";
+  }
+  return line + "\n";
+}
+
+function buildTriangle(max) {
+  let output = "";
+  for (let k = 1; k <= max; k++) {
+    output += makeLine(k);
+  }
+  return output;
+}
+
+console.log(buildTriangle(3));
+
+// function expression catSays
+let catSays = function(max) {
+  let catMessage = "";
+  for (let i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+
+// function declaration helloCat accepting a callback
+function helloCat(callbackFunc) {
+  return "Hello " + callbackFunc(3);
+}
+
+// pass in catSays as a callback function
+console.log(helloCat(catSays));
+
+
+
+// function declaration that takes in two arguments: a function for displaying
+// a message, along with a name of a movie
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+// call the movies function, pass in the function and name of movie
+movies(function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+}, "Finding Nemo");
+
+*/
+
+// Anonymous Function Expression
+let laugh = function(max) {
+  let output = "";
+  for (let i = 0; i < max; i++) {
+    output += "ha";
+  }
+  return output+"!";
+};
+console.log(laugh(10));
+
+// Named Function Expression
+let cry = function weep(max) { // The difference is the weep
+  let output = "";
+  for (let i = 0; i < max; i++) {
+    output += "boohoo";
+  }
+  return output+"!";
+};
+console.log(cry(1));
+
+// Inline Function Expression
+function emotions(myString, myFunc) {
+  console.log("I am " + myString + ", " + myFunc(2));
+}
+
+emotions("happy", function laugh(max) {
+  let output = "";
+  for (let i = 0; i < max; i++) {
+    output += "ha";
+  }
+  return output+"!";
+}); // you can use your laugh function from the previous quizzes
