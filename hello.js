@@ -1,7 +1,8 @@
 const sayHello  = function (name) {
-  console.log("Hello " + name + ", you're looking lovely today.");
+  return "Hello " + name + ", you're looking lovely today.";
 }
 
-sayHello("Turtle");
-sayHello("Pidgeon");
-sayHello("Walrus");
+console.log(sayHello("Turtle"));
+const greeting = sayHello("Pidgeon");
+console.log(greeting);
+console.log(sayHello("Walrus"));
