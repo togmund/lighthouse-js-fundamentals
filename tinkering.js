@@ -139,7 +139,7 @@ if (shirtWidth >= 28  && shirtLength >= 34 && shirtSleeve >= 10.13 ) {
  *
  * Write a switch statement to set the average salary of a person based on their type of completed education.
  *
- */
+ *
 
 // change the value of `education` to test your code
 let education = 'no high school diploma';
@@ -173,3 +173,114 @@ switch (education) {
 }
 let output = 'In 2015, a person with '+education+' earned an average of $'+salary.toLocaleString("en-US")+'/year.';
 console.log(output);
+*/
+
+/*
+ * Programming Quiz: JuliaJames (4-1)
+ 
+
+let x = 1;
+
+while (x < 21) {
+    // Build the output one line at a time
+    let output = "";
+    // Test against our three circumstances
+    if (x % 3 === 0) { output += "Julia"; }
+    if (x % 5 === 0) { output += "James"; }
+    if (output === "") { output = x; }
+    // Log the result
+    console.log(output);
+    // Increment x
+    x += 1;
+}
+
+
+let num = 99;
+
+while (num > -1) {
+    // Build the output one line at a time
+    let output = "";
+    // Test against our two circumstances
+    if (num === 1) {
+      output = num+" bottle of juice on the wall! "+num+" bottle of juice! Take one down, pass it around... "+num+" bottle of juice on the wall!";
+    }
+    if (output === "") {
+        output = num+" bottles of juice on the wall! "+num+" bottles of juice! Take one down, pass it around... "+num+" bottles of juice on the wall!";
+    }
+    // Log the result
+    console.log(output);
+    // Increment x
+    num -= 1;
+}
+
+let t = 60;
+
+while (t > -1) {
+    // Build the output one line at a time
+    let output = "";
+    // Test against our three circumstances
+    if (t === 50) { output += "Orbiter transfers from ground to internal power"; }
+    if (t === 31) { output += "Ground launch sequencer is go for auto sequence start"; }
+    if (t === 16) { output += "Activate launch pad sound suppression system"; }
+    if (t === 10) { output += "Activate main engine hydrogen burnoff system"; }
+    if (t === 6) { output += "Main engine start"; }
+    if (t === 0) { output += "Solid rocket booster ignition and liftoff!"; }
+    if (output === "") { output = "T-"+t+" seconds"; }
+    // Log the result
+    console.log(output);
+    // Increment x
+    t -= 1;
+}
+
+
+
+for (var i = 0; i <= 6; i = i + 2) {
+  console.log(i);
+}
+
+
+
+/*
+ * Programming Quiz: Changing the Loop (4-4)
+ */
+
+// rewrite the while loop as a for loop
+/*
+var x = 9;
+while (x >= 1) {
+    console.log("hello " + x);
+    x = x - 1;
+}
+
+A factorial is calculated by multiplying a number by all the numbers below it. For instance, 3! or "3 factorial" is 3 * 2 * 1 = 6
+
+3! = 3 * 2 * 1 = 63!=3∗2∗1=6
+4! = 4 * 3 * 2 * 1 = 244!=4∗3∗2∗1=24
+5! = 5 * 4 * 3 * 2 * 1 = 1205!=5∗4∗3∗2∗1=120
+
+
+
+const factorialize  = function (factor) {
+  let output = factor;
+  for (let i = factor; i = 1; i--) {
+    output *= i;
+    return output;
+  }
+}
+console.log(factorialize(3));
+
+
+
+let solution = 1;
+for (let i = 1; i < 13; i++) {
+  solution *= i;
+}
+console.log(solution);
+
+*/
+
+for (let row = 0; row < 26; row++) {
+  for (let seat = 0; seat < 100; seat++) {
+    console.log(row + "-" + seat);
+  }
+}
