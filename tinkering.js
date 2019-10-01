@@ -647,7 +647,7 @@ for (var row = 0; row < donutBox.length; row++) {
     console.log(donutBox[row][column]);
   }
 }
-*/
+
 
 let numbers = [
   [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
@@ -671,3 +671,142 @@ for (let row = 0; row < numbers.length; row++) {
 }
 
 console.log(numbers);
+*/
+
+/*
+ * Programming Quiz: Umbrella (7-1)
+
+
+var umbrella = {
+  color: "pink",
+  isOpen: true,
+  open: function() {
+      if (umbrella.isOpen === true) {
+          return "The umbrella is already opened!";
+      } else {
+          umbrella.isOpen = true;
+          return "Julia opens the umbrella!";
+      }
+  },
+  // your code goes here
+  close: function() {
+    if (umbrella.isOpen === false) {
+        return "The umbrella is already closed!";
+    } else {
+        umbrella.isOpen = false;
+        return "Julia closes the umbrella!";
+    }
+  }
+};
+console.log(umbrella);
+umbrella.close();
+console.log(umbrella);
+
+
+
+var sister = {
+  name: "Sarah",
+  age: 23,
+  parents: ["alice", "andy"],
+  siblings: ["julia"],
+  favoriteColor: "purple",
+  pets: true,
+  paintPicture: function() { return "Sarah paints!"; }
+};
+
+sister.paintPicture();
+
+// two equivalent ways to use the key to return its value
+sister["parents"] // returns [ "alice", "andy" ]
+sister.parents // also returns ["alice", "andy"]
+
+var myObj = { 
+  color: "orange",
+  shape: "sphere",
+  type: "food",
+  eat: function() { return "yummy" }
+};
+
+myObj.eat(); // method
+myObj.color; // property
+
+
+let breakfast = {
+  name: "The Lumberjack",
+  price: 9.95,
+  ingredients: ["eggs", "sausage", "toast", "hashbrowns", "pancakes"]
+};
+*/
+
+/*
+ * Programming Quiz: Bank Accounts 1 (7-3)
+ * add a printAccountSummary() method that returns the following account message:
+ * Welcome!
+ * Your balance is currently $1000 and your interest rate is 1%.
+
+
+let savingsAccount = {
+  balance: 1000,
+  interestRatePercent: 1,
+  deposit: function addMoney(amount) {
+      if (amount > 0) {
+          savingsAccount.balance += amount;
+      }
+  },
+  withdraw: function removeMoney(amount) {
+      let verifyBalance = savingsAccount.balance - amount;
+      if (amount > 0 && verifyBalance >= 0) {
+          savingsAccount.balance -= amount;
+      }
+  },
+  // your code goes here
+  printAccountSummary: function () {
+    let output = "";
+    output += "Welcome! \nYour balance is currently $" + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent + "\%.";
+    return output;
+  }
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+console.log(savingsAccount.balance);
+console.log(savingsAccount.withdraw = 50);
+console.log(savingsAccount.removeMoney = 50);
+
+
+let facebookProfile = {
+  name: "",
+  friends: 0,
+  messages: [],
+  postMessage: function(message) {
+    facebookProfile.messages.push(message);
+  },
+  deleteMessage: function(index) {
+    facebookProfile.messages.splice(index,1);
+  },
+  addFriend: function() {
+    facebookProfile.friends++;
+  },
+  removeFriend: function() {
+    facebookProfile.friends--;
+  }
+};
+
+*/
+
+/*
+ * Programming Quiz: Donuts Revisited (7-6)
+ */
+
+var donuts = [
+  { type: "Jelly", cost: 1.22 },
+  { type: "Chocolate", cost: 2.45 },
+  { type: "Cider", cost: 1.59 },
+  { type: "Boston Cream", cost: 5.99 }
+];
+
+// your code goes here
+
+donuts.forEach(function(donuts) {
+  console.log(donuts.type + " donuts cost $" + donuts.cost + " each");
+});
