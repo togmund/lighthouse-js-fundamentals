@@ -21,5 +21,3 @@ console.log(iceCreamFlavours[iceCreamFlavours.length - 1]);
 // Someone wants to know how many options there are.
 // Crack out good ole .length again
 console.log(iceCreamFlavours.length);
-
-
