@@ -1,35 +1,32 @@
 /*
 Purpose of the range function:
-  Count the numbers in a range
+  Count the numbers in a set range by set intervals
 Parameters:
   Number | Start
   Number | End
   Number | Step
+Conditions:
+  Return an empty array if
+    any arguments are undefined,
+    the range doesn't make sense,
+    the interval isn't positive
 Output:
   Array | numbers counted by steps
 */
 
-const range = function (start, end, stop) {
-  output = [start, end, stop];
-  return output;
-}
-
-console.log(range(1,2,3));
-
-/*
-const countDownByHundred = function (num) {
-  let output = 0; // Assume, unless told otherwise, that num will be less than 100
-  for (let i = num; i > 100; i -= 100) {  // Starting with the num, count down by 100 until you reach a number of bottles that will no longer completely fill a box
-    ++output;
+const range = function (start, end, step) {
+  let output = []; // Create an empty array
+  if ((start != undefined && end != undefined && step != undefined) && (start < end) && (step > 0)) { // All of our conditions must be met
+    for (let i = start; i < end + 1; i += step) { // Build a for loop with the arguments
+      output.push(i); // Push the running count into the array
+    }
+  } else {
+    output.splice(0, output.length); // Empty the array if any conditions fail
   }
-  return output;
+  return output; // Reurn the array
 }
 
-const howManyHundreds = function (bottles) {
-  let boxes = 0;  // Assume, unless told otherwise, that there will be no boxes to send
-  bottles % 100 === 0 
-    ? boxes += bottles / 100  // If the number is already neatly divisble by 100, divide it by 100
-    : boxes += countDownByHundred(bottles); // If it isn't, it should count 100 at a time
-  return boxes;
-}
-*/
+console.log(range(0, 10, 0));
+console.log(range(0, 10, 2));
+console.log(range(10, 30, 5));
+console.log(range(-5, 2, 3));
