@@ -21,5 +21,5 @@ const lastIndexOf = function (array, value) {
   matchedPosition.length > 0// Make sure there are matched positions
     ? index = matchedPosition[matchedPosition.length - 1] // If there are matched positions, grab the position with the greatest index in the matchedPosition array
     : index = -1; // If there are no matched positions, store -1 as the index
-  return index; // Reurn the array
+  return index; // Reurn the value
 }
