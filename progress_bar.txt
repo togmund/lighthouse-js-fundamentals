@@ -1,0 +1,24 @@
+Prep Work
+  Welcome
+    4/4
+  Dev Environment
+    14/14
+    0/1
+  Version Control
+    7/7
+  Programming Intro
+    18/29
+    0/2
+  The Browser
+    1/13
+  Katas
+    0/6
+    0/11
+  Stretch Project
+    0/3
+  The Lab Manual
+    4/4
+  Day One Prep
+    4/4
+
+(4+14+7+23+1+4+4)/(4+14+7+29+13+6+3+4+4)

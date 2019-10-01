@@ -368,7 +368,7 @@ movies(function displayFavorite(movieName) {
   console.log("My favorite movie is " + movieName);
 }, "Finding Nemo");
 
-*/
+
 
 // Anonymous Function Expression
 let laugh = function(max) {
@@ -405,3 +405,97 @@ emotions(
     return output+"!";
   }
 );
+
+/*
+Purpose of the ageCalculator function:
+  How many boxes can be filled all the way up with the number of bottles of syrup we have on hand
+Parameters:
+  Number | Syrup bottles on hand
+Output:
+  Number | Boxes that can be filled completely
+
+
+const countDownByHundred = function (num) {
+  let output = 0; // Assume, unless told otherwise, that num will be less than 100
+  for (let i = num; i > 100; i -= 100) {  // Starting with the num, count down by 100 until you reach a number of bottles that will no longer completely fill a box
+    ++output;
+  }
+  return output;
+}
+
+const howManyHundreds = function (bottles) {
+  let boxes = 0;  // Assume, unless told otherwise, that there will be no boxes to send
+  bottles % 100 === 0 
+    ? boxes += bottles / 100  // If the number is already neatly divisble by 100, divide it by 100
+    : boxes += countDownByHundred(bottles); // If it isn't, it should count 100 at a time
+  return boxes;
+}
+
+
+
+const donats = ["glazed", "powdered", "jelly"];
+const mixedData = ["abcd", 1, true, undefined, null, "all the things"];
+const arraysInArrays = [
+  [1, 2, 3],
+  ["Julia", "James"],
+  [true, false, true, false]
+];
+
+const donuts = ["glazed", "chocolate frosted", "boston cream", "powdered", "sprinkled", "maple", "coconut", "jelly"];
+
+
+donuts[2] = "cinnamon twist";
+donuts[4] = "salted caramel";
+donuts[5] = "shortcake eclair";
+
+console.log(donuts);
+
+
+
+const udaciFamily = [];
+
+udaciFamily[0] = "Julia";
+udaciFamily[1] = "James";
+udaciFamily[2] = "Ted";
+
+console.log(udaciFamily);
+
+
+
+let captain = "Mal";
+let second = "Zoe";
+let pilot = "Wash";
+let companion = "Inara";
+let mercenary = "Jayne";
+let mechanic = "Kaylee";
+
+let crew = [
+  captain,
+  second,
+  pilot,
+  companion,
+  mercenary,
+  mechanic
+];
+console.log(crew);
+
+let prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+prices[0] = 44.00;
+prices[2] = 44.00;
+prices[6] = 44.00;
+console.log(prices);
+
+*/
+let donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
+console.log(donuts.length);
+donuts.push("powdered");
+console.log(donuts.length);
+donuts.pop();
+console.log(donuts.length);
+donuts.splice(1, 1, "chocolate cruller", "creme de leche");
+console.log(donuts.length);
+console.log(donuts);
+donuts = ["cookies", "cinnamon sugar", "creme de leche"];
+console.log(donuts);
+donuts.splice(-2, 0, "chocolate frosted", "glazed");
+console.log(donuts);
