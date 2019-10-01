@@ -13,6 +13,13 @@ console.log(iceCreamFlavours);
 // Arrays start at zero, sillybilly
 console.log(iceCreamFlavours[0]);
 
-// Somone wants the first flavor. Log it.
+// Somone wants the last flavor. Log it.
 // No need to count with fingers with the .length method
-console.log(iceCreamFlavours[iceCreamFlavours.length]);
+// the -1 is nescessary because arrays start at zero, sillybilly
+console.log(iceCreamFlavours[iceCreamFlavours.length - 1]);
+
+// Someone wants to know how many options there are.
+// Crack out good ole .length again
+console.log(iceCreamFlavours.length);
+
+
