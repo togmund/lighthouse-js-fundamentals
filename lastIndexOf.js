@@ -12,19 +12,14 @@ Output:
 
 const lastIndexOf = function (array, value) {
   let index = ""; // Set an empty index
+  let matchedPosition = []; // Set an empty variable to store matched positions
+  for (let i = 0; i < array.length; i++) { // Iterate through index
+    if (array[i] === value) {
+      matchedPosition.push(i); // Push each matched position to the matchedPosition array
+    }
+  }
+  matchedPosition.length > 0// Make sure there are matched positions
+    ? index = matchedPosition[matchedPosition.length - 1] // If there are matched positions, grab the position with the greatest index in the matchedPosition array
+    : index = -1; // If there are no matched positions, store -1 as the index
   return index; // Reurn the array
 }
-
-/*
-const lastIndexOf = function (start, end, step) {
-  let output = []; // Create an empty array
-  if ((start != undefined && end != undefined && step != undefined) && (start < end) && (step > 0)) { // All of our conditions must be met
-    for (let i = start; i < end + 1; i += step) { // Build a for loop with the arguments
-      output.push(i); // Push the running count into the array
-    }
-  } else {
-    output.splice(0, output.length); // Empty the array if any conditions fail
-  }
-  return output; // Reurn the array
-}
-*/
